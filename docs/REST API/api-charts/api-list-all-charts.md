@@ -32,6 +32,7 @@ GET https://api-{region}.seatsio.net/charts
 
 GET https://api-{region}.seatsio.net/charts?filter=london
 GET https://api-{region}.seatsio.net/charts?tag=WestEnd
+GET https://api-{region}.seatsio.net/charts?validation=true
 GET https://api-{region}.seatsio.net/charts?expand=events
 
 More info: https://docs.seats.io/docs/api-pagination
@@ -213,6 +214,9 @@ Specifying multiple filters will result in a 400 Bad Request.
 Return only charts that have this tag.
 Specifying multiple tags will result in a 400 Bad Request.
 
+* **validation** *(optional)*   
+Set to true to return validation errors and warnings for the charts (if any).
+  
 * **expand** *(optional)*
 Charts have events associated with them. You can expand the events for each chart by providing `expand=events`. 
 
@@ -226,78 +230,112 @@ Charts have events associated with them. You can expand the events for each char
 { label: 'C#', value: 'csharp', },
 { label: 'Java', value: 'java', },
 { label: 'Python', value: 'python', },
+{ label: 'Ruby', value: 'ruby', },
 { label: 'Javascript', value: 'javascript', },
 ]}>
 <TabItem value='php'>
 
 ```php
-$seatsioClient->charts->listFirstPage((new ChartListParams())->withFilter('london')); 
 // newest charts having 'london' in their name
+$seatsioClient->charts->listFirstPage((new ChartListParams())->withFilter('london')); 
 
-$seatsioClient->charts->listFirstPage((new ChartListParams())->withTag('WestEnd')); 
 // newest charts tagged 'WestEnd'
+$seatsioClient->charts->listFirstPage((new ChartListParams())->withTag('WestEnd')); 
 
-$seatsioClient->charts->listFirstPage((new ChartListParams())->withExpandEvents(true)); 
+// newest charts, together with validation errors and warnings
+$seatsioClient->charts->listFirstPage((new ChartListParams())->withValidation(true)); 
+
 // newest charts and a list of linked events
+$seatsioClient->charts->listFirstPage((new ChartListParams())->withExpandEvents(true)); 
 ```
 
 </TabItem>
 <TabItem value='csharp'>
 
 ```csharp
-Client.Charts.ListFirstPage(filter: "london")); 
 // newest charts having 'london' in their name
+Client.Charts.ListFirstPage(filter: "london")); 
 
-Client.Charts.ListFirstPage(tag: "foo"); 
 // newest charts tagged 'WestEnd'
+Client.Charts.ListFirstPage(tag: "foo"); 
 
-Client.Charts.ListFirstPage(expandEvents: true); 
+// newest charts, together with validation errors and warnings
+Client.Charts.ListFirstPage(withValidation: true); 
+
 // newest charts and a list of linked events
+Client.Charts.ListFirstPage(expandEvents: true); 
 ```
 
 </TabItem>
 <TabItem value='java'>
 
 ```java
-client.charts.listFirstPage(new ChartListParams().withFilter("london")); 
 // newest charts having 'london' in their name
+client.charts.listFirstPage(new ChartListParams().withFilter("london")); 
 
-client.charts.listFirstPage(new ChartListParams().withTag("WestEnd")); 
 // newest charts tagged 'WestEnd'
+client.charts.listFirstPage(new ChartListParams().withTag("WestEnd"));
 
-client.charts.listFirstPage(new ChartListParams().withExpandEvents(true)); 
+// newest charts, together with validation errors and warnings
+client.charts.listFirstPage(new ChartListParams().withValidation(true)); 
+
 // newest charts and a list of linked events
+client.charts.listFirstPage(new ChartListParams().withExpandEvents(true)); 
 ```
 
 </TabItem>
 <TabItem value='python'>
 
 ```python
-client.charts.list_first_page(filter="london") 
 # newest charts having 'london' in their name
+client.charts.list_first_page(filter="london") 
 
-client.charts.list_first_page(tag="foo") 
 # newest charts tagged 'WestEnd'
+client.charts.list_first_page(tag="WestEnd")
 
-client.charts.list_first_page(expandEvents=True) 
+# newest charts, together with validation errors and warnings
+client.charts.list_first_page(with_validation=True)
+
 # newest charts and a list of linked events
+client.charts.list_first_page(expand_events=True) 
+```
+
+</TabItem>
+<TabItem value='ruby'>
+
+```ruby
+# newest charts having 'london' in their name
+client.charts.list(chart_filter: 'london').first_page()
+
+# newest charts tagged 'WestEnd'
+client.charts.list(tag: 'WestEnd').first_page()
+
+# newest charts, together with validation errors and warnings
+client.charts.list(with_validation: true).first_page()
+
+# newest charts and a list of linked events
+client.charts.list(expand_events: true).first_page()
 ```
 
 </TabItem>
 <TabItem value='javascript'>
 
 ```javascript
+// newest charts having 'london' in their name
 let params = new ChartListParams().withFilter('london');
 await client.charts.listFirstPage(params);
-// newest charts having 'london' in their name
 
+// newest charts tagged 'WestEnd'
 let params = new ChartListParams().withTag('WestEnd');
 await client.charts.listFirstPage(params);
-// newest charts tagged 'WestEnd'
 
+// newest charts, together with validation errors and warnings
+let params = new ChartListParams().withValidation(true);
+await client.charts.listFirstPage(params);
+
+// newest charts and a list of linked events
 let params = new ChartListParams().withExpandEvents(true);
 await client.charts.listFirstPage(params);
-// newest charts and a list of linked events
 
 
 ```
@@ -335,7 +373,11 @@ await client.charts.listFirstPage(params);
                     "bookWholeTables": false,
                     "key": "event34"
                 }
-            ]
+            ],
+            "validation": {
+              "errors": ["VALIDATE_OBJECTS_WITHOUT_CATEGORIES"],
+              "warnings": ["VALIDATE_DUPLICATE_LABELS"]
+            }
         },
         {
             "name":"chart2",
