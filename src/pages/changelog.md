@@ -2,6 +2,10 @@
 title: Changelog
 hide_table_of_contents: true
 ---
+### Version 445 - 04/08/2021
+- event manager: dialogs now work again in latest Chrome version (v92)
+- web app: account activation links never expire
+
 ### Version 444 - 02/07/2021
 - renderer: removed "powered by seats.io" logo on watermarked charts (i.e. free accounts)
 
