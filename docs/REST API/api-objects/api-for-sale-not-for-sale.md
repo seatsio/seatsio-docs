@@ -162,7 +162,12 @@ curl https://api-{region}.seatsio.net/events/event34/actions/mark-as-not-for-sal
 
 **Response**
 
-204 - No Content
+```javascript
+{
+    "rateLimitRemainingCalls": 9,
+    "rateLimitResetDate": "2021-10-01T23:00:00Z"
+}
+```
 
 :::caution Warning
 There's a rate limit of 10 calls per day per event. If that rate limit if reached, a 429 (Too Many Requests) is returned. The Retry-After header indicates how many seconds you have to wait before trying again.
@@ -296,7 +301,12 @@ curl https://api-{region}.seatsio.net/events/event34/actions/mark-as-for-sale \
 
 **Response**
 
-204 - No Content
+```javascript
+{
+    "rateLimitRemainingCalls": 9,
+    "rateLimitResetDate": "2021-10-01T23:00:00Z"
+}
+```
 
 :::caution Warning
 There's a rate limit of 10 calls per day per event. If that rate limit if reached, a 429 (Too Many Requests) is returned. The Retry-After header indicates how many seconds you have to wait before trying again.
