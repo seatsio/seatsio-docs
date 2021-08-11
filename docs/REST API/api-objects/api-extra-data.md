@@ -118,9 +118,7 @@ await client.events.book('eventKey', objects);
 </TabItem>
 </Tabs>
 
-
-
-- API: added `keepExtraData` flag to calls that change the object status. If set to `true`, the existing extra data doesn't get cleared
+When changing object status, `extraData` gets cleared. To avoid that, pass in the `keepExtraData` flag: 
 
 ```javascript
 // /book, /release, /hold or /change-object-status

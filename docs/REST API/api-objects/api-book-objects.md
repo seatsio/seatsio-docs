@@ -165,10 +165,10 @@ All seats (or tables, booths or GA places) passed in to this API will be conside
 * **objects**: an array of object ids to book, or an array of object ids and ticket types
 * **holdToken** <i>(optional)</i>: the hold token must be supplied when you want to make sure that the same person that made the hold confirms his booking. If the seats were not held with this token, the API call doesn't book any seats and returns an error 400 (bad request).
 * **orderId** *(optional)*: an order id, defined by yourself, to be able to [retrieve the objects IDs per order](/docs/api/detailed-reports#detailed-report-by-order-id) later on.
+* **keepExtraData** *(optional)*: boolean. If set to true, the existing extra data doesn't get cleared
 * **channelKeys** <i>(optional)</i>: an array of strings, i.e. the channel keys of the channel(s) to which the objects belong. If omitted, and the objects to be booked are assigned to a channel, the request will fail with 400 Bad request. Pass in `NO_CHANNEL` as channel key to allow objects without a channel.
 * **ignoreChannels** <i>(optional)</i>: if true, the booking call succeeds, even if the booked objects belong to a channel. Useful inside a back office application, in which the user is allowed to book any seat - no matter the channel.
 Should not be used in combination with `channelKeys`.
-* **ignoreSocialDistancing** <i>(optional)</i>: if true, social distancing rules are not checked for this booking.
 
 ## Response
 
