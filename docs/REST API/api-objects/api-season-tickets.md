@@ -115,7 +115,7 @@ await client.events.changeObjectStatus(['event1Key', 'event2Key', 'event3Key'], 
 * **channelKeys** <i>(optional)</i>: an array of strings, i.e. the channel keys of the channel(s) to which the objects belong. If omitted, and the objects to be booked are assigned to a channel, the request will fail with 400 Bad request. Pass in `NO_CHANNEL` as channel key to allow objects without a channel.
 * **ignoreChannels** <i>(optional)</i>: if true, the booking call succeeds, even if the booked objects belong to a channel. Useful inside a back office application, in which the user is allowed to book any seat - no matter the channel.
   Should not be used in combination with `channelKeys`.
-* **ignoreSocialDistancing** <i>(optional)</i>: if true, social distancing rules are not checked for this booking.
+* **ignoreSocialDistancing** <i>(optional)</i>: if true, social distancing rules are not checked for this booking. This is only supported in the `/change-object-status` endpoint.
 
 ## Response
 
