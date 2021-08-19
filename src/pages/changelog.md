@@ -2,6 +2,9 @@
 title: Changelog
 hide_table_of_contents: true
 ---
+### Version 446 - 16/08/2021
+- API: for sale configs for events in season get merged. If seat A-1 is not for sale in one event, and A-2 in another, both those seats are not for sale for the season. 
+
 ### Version 445 - 04/08/2021
 - event manager: dialogs now work again in latest Chrome version (v92)
 - web app: account activation links never expire
