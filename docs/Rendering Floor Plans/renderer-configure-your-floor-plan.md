@@ -13,7 +13,7 @@ The Renderer supports a long list of configuration options you can use to tweak 
 
 As a minimal configuration, you need to provide 3 options: 
 
-* `divId`
+* `divId` (or `container`)
 * `event`
 * `workspaceKey`
 

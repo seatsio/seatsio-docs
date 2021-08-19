@@ -13,5 +13,5 @@ This section gives an overview of the options you can use when embedding the sea
 
 The minimal required configuration options are: 
 
-*  divId: the id if the `<div>` element in which you want to render the Designer
-* secretKey: your secret key (find it on your [settings](https://app.seats.io/settings) page).
+* [`divId`](/docs/embedded-designer/configuration-divid): the id if the `<div>` element in which you want to render the designer. Alternatively, you can pass in [`container`](/docs/embedded-designer/configuration-container). 
+* [`secretKey`](/docs/embedded-designer/configuration-secretkey): your secret key (find it on your [settings](https://app.seats.io/settings) page).

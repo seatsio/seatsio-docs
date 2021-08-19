@@ -15,6 +15,7 @@ module.exports = {
             "Configure your floor plan": [
                 "Rendering Floor Plans/renderer-configure-your-floor-plan",
                 "Rendering Floor Plans/renderer-configure-your-floor-plan/renderer-config-divid",
+                "Rendering Floor Plans/renderer-configure-your-floor-plan/renderer-config-container",
                 "Rendering Floor Plans/renderer-configure-your-floor-plan/renderer-config-event",
                 "Rendering Floor Plans/renderer-configure-your-floor-plan/renderer-config-events",
                 "Rendering Floor Plans/renderer-configure-your-floor-plan/renderer-config-workspacekey",
@@ -315,6 +316,7 @@ module.exports = {
             "Configuration": [
                 "Embedded Designer/embedded-designer-configuration",
                 "Embedded Designer/embedded-designer-configuration/embedded-designer-configuration-divid",
+                "Embedded Designer/embedded-designer-configuration/embedded-designer-configuration-container",
                 "Embedded Designer/embedded-designer-configuration/embedded-designer-configuration-secretkey",
                 "Embedded Designer/embedded-designer-configuration/embedded-designer-configuration-chartkey",
                 "Embedded Designer/embedded-designer-configuration/embedded-designer-configuration-language",

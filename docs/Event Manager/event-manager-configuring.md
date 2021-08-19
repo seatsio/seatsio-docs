@@ -10,12 +10,25 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 ## divId
-**Type**: string  
+**Type**: string
 
-The id of the div on your page in which you want seats.io to render the event manager. This is a required config option.
+The id of the div on your page in which you want seats.io to render the event manager.
+
+Either pass in `divId` or `container`, but not both.
 
 ```javascript
-divId: 'event-manager'
+divId: 'chart-manager'
+```
+
+## container
+** Type**: Element
+
+The parent [Element](https://developer.mozilla.org/en-US/docs/Web/API/Element) in which the event manager gets rendered.
+
+Either pass in `container` or `divId`, but not both.
+
+```javascript
+container: document.getElementById('chart')
 ```
 
 ## secretKey
