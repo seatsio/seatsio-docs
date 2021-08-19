@@ -2,6 +2,10 @@
 title: Changelog
 hide_table_of_contents: true
 ---
+### Version 447 - 19/08/2021
+- renderer/event manager/designer: added `container` parameter, to pass in a DOM element instead of a `divId` string
+- renderer/event manager/designer: we now support rendering in the shadow DOM, so you're able to create a web component around the chart
+
 ### Version 446 - 16/08/2021
 - API: for sale configs for events in season get merged. If seat A-1 is not for sale in one event, and A-2 in another, both those seats are not for sale for the season. 
 
