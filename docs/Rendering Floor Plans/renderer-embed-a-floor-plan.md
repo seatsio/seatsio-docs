@@ -40,17 +40,17 @@ So in short: just copy & paste this code snippet and adapt it to your needs:
 
 
 :::info 
-If you're developing a *React* application, consider using our React wrapper: https://github.com/seatsio/seatsio-react. For *react-native*, this proof-of-concept should get you started: https://github.com/seatsio/seatsio-react-native.
+To make clientside integration easier, we've developed wrapper libraries for a number of popular frameworks and tools:  
 
-For *Android* there's https://github.com/seatsio/seatsio-android
+* *React*: https://github.com/seatsio/seatsio-react 
+* *React-native*: https://github.com/seatsio/seatsio-react-native
+* *Android*: https://github.com/seatsio/seatsio-android
+* *iOS*: https://github.com/seatsio/seatsio-ios
 
-For *iOS* https://github.com/seatsio/seatsio-ios
-
-In *TypeScript* https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/seatsio
+*TypeScript* types are available here: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/seatsio
 :::
 
-In the rest of the documentation, code examples will be presented in interactive code editors like the one below. 
-
+In the rest of the documentation, code examples will be presented in interactive code editors like the one below.     
 Feel free to play around! 
 
 <iframe width="100%" height="580" src="//jsfiddle.net/seatsio/xjmk1g36/embedded/js,html,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
