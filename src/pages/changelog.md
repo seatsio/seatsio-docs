@@ -2,6 +2,9 @@
 title: Changelog
 hide_table_of_contents: true
 ---
+### Version 448 - 31/08/2021
+- renderer: created React Native wrapper: https://github.com/seatsio/seatsio-react-native
+
 ### Version 447 - 19/08/2021
 - renderer/event manager/designer: added `container` parameter, to pass in a DOM element instead of a `divId` string
 - renderer/event manager/designer: we now support rendering in the shadow DOM, so you're able to create a web component around the chart
