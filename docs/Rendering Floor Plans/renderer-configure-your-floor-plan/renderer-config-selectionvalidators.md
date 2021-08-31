@@ -88,6 +88,8 @@ selectionValidators: [
 
 Checks for seats that are not on the same row or not next to each other. Also, it checks for seats that don't have the same category.
 
+This validator doesn't show errors on the chart, but it invokes [onSelectionInvalid](/docs/renderer/events-onselectioninvalid).
+
 ```javascript
 selectionValidators: [
     {'type': 'consecutiveSeats'}
