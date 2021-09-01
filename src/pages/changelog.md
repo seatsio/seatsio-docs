@@ -3,7 +3,7 @@ title: Changelog
 hide_table_of_contents: true
 ---
 ### Version 449 - 01/09/2021
-- renderer: new `spotlight` mode to highlight seats
+- renderer: new `spotlight` mode to highlight seats or other objects
 - renderer: bug fix: `objectLabel` now works properly for tables
 
 ### Version 448 - 31/08/2021
