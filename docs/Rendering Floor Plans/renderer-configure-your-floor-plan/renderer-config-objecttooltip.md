@@ -24,10 +24,11 @@ import TabItem from '@theme/TabItem';
 }
 ```
 
+<!-- ![tooltip-configs@2x.gif](/img/readme/tooltip-configs@2x.gif) -->
 
-![tooltip-configurations.gif](/img/readme/tooltip-configurations.gif)
+<img src="/img/readme/tooltip-configs@2x.gif" alt="Various tooltip configurations" width="215" />
 
-Allows to toggle on or off some features of the cursor tooltip, displayed when hovering objects on mouse-input devices like laptops and desktop computers.
+Allows to toggle on or off some features of the cursor tooltip, displayed when hovering objects when using pointing devices like a mouse, or when tapping on an object on touch devices.
 
 Parameters that aren't passed will use their default values instead.
 
@@ -43,8 +44,3 @@ The supported parameters are:
 - `confirmSelectionOnMobile` - **Boolean. Default: auto.** If `true`, a popup will show up when selecting an object on mobile containing the same information as the desktop tooltip, seen on hover. A button must be pressed to confirm the selection. If `false`, selection is done instantly but no information regarding the object is shown to the user. If unset, it will automatically attempt to show it unless an `onObjectClicked` parameter is passed in.
 
 <iframe width="100%" height="580" src="//jsfiddle.net/seatsio/kt2xuf5m/embedded/js,html,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-
-
-![Screen Shot 2018-11-28 at 11.05.41 AM.png](/img/readme/Screen-Shot-2018-11-28-at-11.05.41-AM.png)
-
