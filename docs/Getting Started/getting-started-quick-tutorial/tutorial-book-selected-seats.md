@@ -28,6 +28,10 @@ Here are some examples using the respective [API Client libraries](/docs/api/cli
 <TabItem value='php'>
 
 ```php
+use Seatsio\Region;
+use Seatsio\SeatsioClient;
+
+$seatsioClient = new SeatsioClient(Region::EU(), <WORKSPACE SECRET KEY>); // You can find this key at https://app.seats.io/workspace-settings
 $seatsioClient->events->book("event1", ["A-3", "A-5", "A-7"]);
 ```
 
@@ -35,6 +39,9 @@ $seatsioClient->events->book("event1", ["A-3", "A-5", "A-7"]);
 <TabItem value='csharp'>
 
 ```csharp
+using SeatsioDotNet;
+
+var Client = new SeatsioClient(Region.EU, "<WORKSPACE SECRET KEY>"); // You can find this key at https://app.seats.io/workspace-settings
 Client.Events.Book("event1", new [] { "A-3", "A-5", "A-7" });
 ```
 
@@ -42,6 +49,10 @@ Client.Events.Book("event1", new [] { "A-3", "A-5", "A-7" });
 <TabItem value='java'>
 
 ```java
+import seatsio.SeatsioClient;
+import seatsio.Region;
+
+SeatsioClient client = new SeatsioClient(Region.EU, "<WORKSPACE SECRET KEY>");  // You can find this key at https://app.seats.io/workspace-settings
 client.events.book("event1", Arrays.asList("A-3", "A-5", "A-7"));
 ```
 
@@ -49,6 +60,9 @@ client.events.book("event1", Arrays.asList("A-3", "A-5", "A-7"));
 <TabItem value='python'>
 
 ```python
+import seatsio
+
+client = seatsio.Client(seatsio.Region.EU(), secret_key="my-workspace-secret-key") # You can find this key at https://app.seats.io/workspace-settings
 client.events.book("event1", ["A-3", "A-5", "A-7"])
 ```
 
@@ -56,6 +70,9 @@ client.events.book("event1", ["A-3", "A-5", "A-7"])
 <TabItem value='ruby'>
 
 ```ruby
+require 'seatsio'
+
+client = Seatsio::Client.new(Seatsio::Region.EU(), "my-workspace-secret-key") # You can find this key at https://app.seats.io/workspace-settings
 client.events.book('event1', ['A-3', 'A-5', 'A-7'], '8AWOqZZTz5')
 ```
 
@@ -63,6 +80,9 @@ client.events.book('event1', ['A-3', 'A-5', 'A-7'], '8AWOqZZTz5')
 <TabItem value='javascript'>
 
 ```javascript
+import { SeatsioClient, Region } from 'seatsio'
+
+let client = new SeatsioClient(Region.EU(), <WORKSPACE SECRET KEY>) // You can find this key at https://app.seats.io/workspace-settings
 client.events.book('eventKey', ['A-3', 'A-5', 'A-7']);
 ```
 
