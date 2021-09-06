@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 **Type**: string  
 
-The workspace key for the workspace in which the chart was created. You can find it on your [workspace settings](https://app.seats.io/workspace-settings) page.
+The public workspace key for the workspace in which the chart was created. You can find it on your [workspace settings](https://app.seats.io/workspace-settings) page.
 
 :::info 
 This parameter used to be called `publicKey`
