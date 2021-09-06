@@ -8,8 +8,11 @@ updatedAt: "2020-12-29T07:33:51.721Z"
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import AdminKeyAuth from '../snippets/admin-key-auth.md';
 
 Report with number of used seats in a certain month. The numbers are aggregated per workspace, per chart and per event.
+
+<AdminKeyAuth />
 
 ```
 GET /reports/usage/month/{month}

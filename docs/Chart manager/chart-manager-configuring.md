@@ -33,7 +33,7 @@ container: document.getElementById('chart')
 
 ## secretKey
 **Type**: string  
-The secret key of a workspace, or the company admin key.
+The secret key of a workspace
 
 :::danger Important
 Never expose this secret key on a public web page! Only use the chart manager behind a login wall.

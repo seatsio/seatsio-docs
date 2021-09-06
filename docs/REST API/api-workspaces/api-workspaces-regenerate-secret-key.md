@@ -8,10 +8,11 @@ updatedAt: "2020-04-27T10:28:22.904Z"
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import AdminKeyAuth from '../snippets/admin-key-auth.md';
 
 The secret key of a workspace should be kept secret at all times. If it does get compromised, you can generate a new one.
 
-
+<AdminKeyAuth />
 
 <Tabs 
   groupId="serverside-code-samples"

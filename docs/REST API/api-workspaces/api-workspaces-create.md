@@ -8,10 +8,11 @@ updatedAt: "2020-07-03T16:00:35.910Z"
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import AdminKeyAuth from '../snippets/admin-key-auth.md';
 
 Creates a workspace. Only the name is required.
 
-
+<AdminKeyAuth />
 
 <Tabs 
   groupId="serverside-code-samples"

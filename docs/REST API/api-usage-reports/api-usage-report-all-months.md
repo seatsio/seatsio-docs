@@ -8,8 +8,11 @@ updatedAt: "2019-06-03T14:02:51.546Z"
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import AdminKeyAuth from '../snippets/admin-key-auth.md';
 
 Report with number of used seats, aggregated per month.
+
+<AdminKeyAuth />
 
 ```
 GET /reports/usage

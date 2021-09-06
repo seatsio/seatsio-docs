@@ -30,7 +30,7 @@ So in short: just copy & paste this code snippet and adapt it to your needs.
 <script>
     new seatsio.EventManager({
         divId: 'event-manager',
-        secretKey: 'your secret key', // never expose the secret key on a public web page!
+        secretKey: 'your workspace secret key', // never expose the secret key on a public web page!
         event: 'your event key',
         mode: 'manageForSaleConfig' // 'manageObjectStatuses' or 'manageForSaleConfig'. More to follow.
     }).render();
