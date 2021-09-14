@@ -34,10 +34,13 @@ POST https://api-{region}.seatsio.net/events/{eventKey}
 <TabItem value='php'>
 
 ```php
+// updating chart key
 $seatsioClient->events->update("event34", "newChartKey");
 
+// updating event key
 $seatsioClient->events->update("event34", null, "newEventKey");
 
+// updating table booking config
 $seatsioClient->events->update(
   "event34", null, null,
   TableBookingConfig::custom(["T1" => "BY_TABLE", "T2" => "BY_SEAT"])
@@ -54,10 +57,13 @@ $seatsioClient->events->update("event34", null, null, null, "");
 <TabItem value='csharp'>
 
 ```csharp
-Client.Events.Update("event34", "newChartKey");
+// updating chart key
+Client.Events.Update("event34", "newChartKey", null);
 
+// updating event key
 Client.Events.Update("event34", null, "newEventKey");
 
+// updating table booking config
 Client.Events.Update(
   "event34", null, null,
   new Dictionary<string, string> {{"T1", "BY_TABLE"}, {"T2", "BY_SEAT"}}
@@ -74,10 +80,13 @@ Client.Events.Update("event34", null, null, null, "");
 <TabItem value='java'>
 
 ```java
-client.events.update("event34", "newChartKey");
+// updating chart key
+client.events.update("event34", "newChartKey", null);
 
+// updating event key
 client.events.update("event34", null, "newEventKey");
 
+// updating table booking config
 client.events.update(
   "event34", null, null,
   TableBookingConfig.custom(ImmutableMap.of("T1", BY_TABLE, "T2", BY_SEAT))
@@ -94,16 +103,19 @@ client.events.update("event34", null, null, null, "");
 <TabItem value='python'>
 
 ```python
+# updating chart key
 client.events.update("event34", chart_key="newChartKey")
 
+# updating event key
 client.events.update("event34", event_key="newEventKey")
 
+# updating table booking config
 client.events.update("event34", table_booking_config=TableBookingConfig.custom({"T1": "BY_TABLE", "T2": "BY_SEAT"}))
 
-// assigning a social distancing ruleset key
+# assigning a social distancing ruleset key
 client.events.update("event34", social_distancing_ruleset_key="newSocialDistancingRulesetKey")
 
-// removing the social distancing ruleset key
+# removing the social distancing ruleset key
 client.events.update("event34", social_distancing_ruleset_key="")
 ```
 
@@ -111,10 +123,13 @@ client.events.update("event34", social_distancing_ruleset_key="")
 <TabItem value='ruby'>
 
 ```ruby
+# updating chart key
 client.events.update key: "event34", chart_key: "newChartKey"
 
+# updating event key
 client.events.update key: "event34", event_key: "newEventKey"
 
+# updating table booking config
 client.events.update key: "event34", table_booking_config: Seatsio::TableBookingConfig::custom({'T1' => 'BY_TABLE', 'T2' => 'BY_SEAT'})
 
 # assigning a social distancing ruleset key
@@ -128,10 +143,13 @@ client.events.update key: "event34", social_distancing_ruleset_key: ""
 <TabItem value='javascript'>
 
 ```javascript
+// updating chart key
 await client.events.update('eventKey', 'newChartKey');
 
+// updating event key
 await client.events.update('eventKey', null, 'newEventKey');
 
+// updating table booking config
 await client.events.update(
   'eventKey', null, null,
   TableBookingConfig.custom({ T1: 'BY_TABLE', T2: 'BY_SEAT' })
