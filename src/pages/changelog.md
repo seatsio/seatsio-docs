@@ -2,6 +2,13 @@
 title: Changelog
 hide_table_of_contents: true
 ---
+### Version 451 - 10/09/2021
+- event manager: bug fix: no more social distancing warning when releasing seats in `manageObjectStatusesMode`
+- renderer: performance improvements
+
+### Version 450 - 09/09/2021
+- renderer: chart now zooms out when switching floors on multi-floor charts
+
 ### Version 449 - 01/09/2021
 - renderer: new `spotlight` mode to highlight seats or other objects
 - renderer: bug fix: `objectLabel` now works properly for tables
