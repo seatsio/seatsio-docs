@@ -2,6 +2,10 @@
 title: Changelog
 hide_table_of_contents: true
 ---
+### Version 452 - 15/09/2021
+- event manager: improved icons and tooltips + category color is now still visible for booked seats 
+- renderer: bug fix: in spotlight mode, all objects except the select ones are greyed out when the select objects aura is shown
+
 ### Version 451 - 10/09/2021
 - event manager: bug fix: no more social distancing warning when releasing seats in `manageObjectStatusesMode`
 - renderer: performance improvements
