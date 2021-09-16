@@ -31,7 +31,7 @@ Features that can be enabled/disabled are:
 * `shapes` (shapes tool)
 * `texts` (texts tool)
 * `sections` (sections tool)
-* `icons` (icons tool)
+* `icon` (icons tool)
 * `images` (images tool)
 * `viewFromYourSeat`
 * `firstTimeTutorial`
