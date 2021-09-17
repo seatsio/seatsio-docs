@@ -2,6 +2,11 @@
 title: Changelog
 hide_table_of_contents: true
 ---
+### Version 453 - 17/09/2021
+- event manager: added 'select' mode, in which the user can select seats, but there's no action button. Use this mode when you want to build your own UI.
+- event manager: tooltip shows the exact seat status, instead of only booked or free
+- designer: bug fix: icons feature can now be disabled (as was already documented)
+
 ### Version 452 - 15/09/2021
 - event manager: improved icons and tooltips + category color is now still visible for booked seats 
 - renderer: bug fix: in spotlight mode, all objects except the select ones are greyed out when the select objects aura is shown
