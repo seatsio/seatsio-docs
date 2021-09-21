@@ -2,6 +2,10 @@
 title: Changelog
 hide_table_of_contents: true
 ---
+### Version 454 - 21/09/2021
+- renderer: made panning smoother
+- renderer: bug fix: changes in available and unavailable categories are now properly visible on the chart
+ 
 ### Version 453 - 17/09/2021
 - event manager: added 'select' mode, in which the user can select seats, but there's no action button. Use this mode when you want to build your own UI.
 - event manager: tooltip shows the exact seat status, instead of only booked or free
