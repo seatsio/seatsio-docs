@@ -62,10 +62,11 @@ The keys of the events for which you want to render the event manager. Only `man
 
 Can be either:
 
-- `'manageObjectStatuses'`: to book and release seats
+- `'manageObjectStatuses'`: to book and release seats.
 - `'manageForSaleConfig'`: to mark seats as [for sale / not for sale](/docs/api/for-sale-not-for-sale).
-- `'manageTableBooking'`: to indicate which tables are bookable as a whole, and which ones are bookable by seat
-- `'manageChannels'`: to manage the list of channels for the event, and to assign objects to channels. 
+- `'manageTableBooking'`: to indicate which tables are bookable as a whole, and which ones are bookable by seat.
+- `'manageChannels'`: to manage the list of channels for the event, and to assign objects to channels.
+- `'select'`: to allow a user to select objects, without any call to action. Best paired with configuration parameters detailed in [Reacting to events](http://localhost:3000/docs/event-manager/reacting-to-events).
 
 ## language
 **Type**: string  
